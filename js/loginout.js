@@ -15,14 +15,14 @@ function onLoginSubmit(event) {
   showContents();
 }
 
-function onLogoutSubmit() {
+function onLogoutSubmit(event) {
   localStorage.removeItem(USERNAME_KEY);
   localStorage.removeItem(TODO_KEY);
 }
 
 function showContents() {
   const username = localStorage.getItem(USERNAME_KEY);
-  greeting.innerText = `Hello ${username}!`;
+  greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
   logoutForm.classList.remove(HIDDEN_CLASSNAME);
   todo.classList.remove(HIDDEN_CLASSNAME);

@@ -5,35 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>New Tab</title>
+    <title>Nomad Todo</title>
   </head>
   <body id="background">
-    <h2 id="clock">00:00:00</h2>
+    <header id="top-bar">
+      <h2 id="clock">00:00:00</h2>
+      <div id="weather">
+        <span>City</span>
+        <span>Degree</span>
+        <span>Weather</span>
+        <img src="http://openweathermap.org/img/wn/01d@2x.png" class="icon" />
+      </div>
+    </header>
 
-    <form id="login-form" class="hidden">
-      <input type="text" placeholder="What is your name?" required />
-      <button type="submit">Log In</button>
-    </form>
-    <h2 id="greeting" class="hidden"></h2>
-
-    <div id="todo" class="hidden">
-      <form id="todo-form">
-        <input type="text" placeholder="What to do?" required />
+    <main id="contents">
+      <form id="login-form" class="hidden questionArea">
+        <input type="text" placeholder="What is your name?" required />
+        <button type="submit" class="log-btn">Log In</button>
       </form>
-      <ul id="todo-list"></ul>
-    </div>
 
-    <form id="logout-form" class="hidden">
-      <button type="submit">Log Out</button>
-    </form>
+      <div>
+        <h2 id="greeting" class="hidden"></h2>
+      </div>
 
-    <div id="weather"><span></span><span></span></div>
+      <div id="todo" class="hidden">
+        <div>
+          <form id="todo-form" class="questionArea">
+            <input type="text" placeholder="What to do?" required />
+            <button type="submit" class="icon">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </form>
+        </div>
+        <div id="todo-list-div">
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <form id="logout-form" class="hidden">
+        <button type="submit" class="log-btn">Log Out</button>
+      </form>
+    </footer>
 
     <script src="js/background.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/geolocation.js"></script>
     <script src="js/loginout.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/e7a083b001.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
