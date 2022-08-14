@@ -7,12 +7,33 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>New Tab</title>
   </head>
-  <body class="background">
-    <h2 class="clock">00:00:00</h2>
+  <body id="background">
+    <h2 id="clock">00:00:00</h2>
+
+    <form id="login-form" class="hidden">
+      <input type="text" placeholder="What is your name?" required />
+      <button type="submit">Log In</button>
+    </form>
+    <h2 id="greeting" class="hidden"></h2>
+
+    <div id="todo" class="hidden">
+      <form id="todo-form">
+        <input type="text" placeholder="What to do?" required />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <form id="logout-form" class="hidden">
+      <button type="submit">Log Out</button>
+    </form>
+
+    <div id="weather"><span></span><span></span></div>
+
     <script src="js/background.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/geolocation.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/todolist.js"></script>
+    <script src="js/loginout.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
